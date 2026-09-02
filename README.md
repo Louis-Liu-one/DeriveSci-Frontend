@@ -1,48 +1,19 @@
-# DeriveSci-Frontend
+# DeriveSci.com 前端
 
-This template should help get you started developing with Vue 3 in Vite.
+欢迎来到 [DeriveSci](https://derivesci.com)，我是 LYX。
 
-## Recommended IDE Setup
+我编篡此集，旨在探讨理科难题，提升推理能力，与广大数学爱好者同飨逻辑之美。
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+非常欢迎各位访问我的网站，祝各位学有所获，不断精进。
 
-## Recommended Browser Setup
+网站草创之初，很多题目没有上传，一些页面没有实现，敬请谅解。
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## 新 repo 摘要
 
-## Type Support for `.vue` Imports in TS
+先前，[DeriveSci 项目](https://github.com/Louis-Liu-one/DeriveSci) 使用 Flask 后端直接渲染 Jinja2 模板，前后端未分离。随着开发推进，遇到了诸多项目基本结构上的问题。
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+近日，为了项目持续发展，作者计划从 Flask+Jinja2 模式转为后端 Flask、前端 Vue+NaiveUI 实现前后端分离的模式，目前正在持续开发。
 
-## Customize configuration
+本 repo 为 DeriveSci 项目的前端部分，正在对所有页面使用 Vue 重写。欢迎向此 repo 提交 Pull Requests。
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+**请不要再向已废弃的旧 [DeriveSci 项目](https://github.com/Louis-Liu-one/DeriveSci) 提交 Pull Requests。**
