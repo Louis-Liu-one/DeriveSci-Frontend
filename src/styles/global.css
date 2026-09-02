@@ -1,0 +1,16 @@
+.disabled {
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.katex {
+  font-size: 1em;
+}
+
+p.katex-block {
+  overflow-x: auto;
+}

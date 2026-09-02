@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Main Font';
+  src: url(@/assets/fonts/Main.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Main Font SC';
+  src: url(@/assets/fonts/MainSC.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sans Font';
+  src: url(@/assets/fonts/Sans.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sans Font SC';
+  src: url(@/assets/fonts/SansSC.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mono Font';
+  src: url(@/assets/fonts/Mono.ttf) format('truetype');
+  font-display: swap;
+}
