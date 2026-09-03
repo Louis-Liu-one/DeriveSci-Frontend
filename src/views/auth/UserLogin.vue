@@ -1,6 +1,7 @@
 <template>
   <AuthLayout>
     <template #left>
+      <n-h2>欢迎回来</n-h2>
       <n-form ref="formRef" :model="formData" :rules="rules">
         <n-form-item label="用户名" path="userName">
           <n-input
@@ -34,13 +35,13 @@
 import { ref, reactive } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useMessage } from 'naive-ui'
-import { NButton, NForm, NFormItem, NInput } from 'naive-ui'
+import { NH2, NButton, NForm, NFormItem, NInput } from 'naive-ui'
 import type { FormInst, FormRules } from 'naive-ui'
 
-import AuthLayout from '@/layouts/AuthLayout.vue'
 import { useAuthStore } from '@/stores/modules/auth'
 import { login } from '@/api/modules/auth'
 import type { ApiResponse } from '@/api/types'
+import AuthLayout from '@/layouts/AuthLayout.vue'
 
 const message = useMessage()
 const router = useRouter()
@@ -74,7 +75,7 @@ const handleSubmit = async () => {
     })
     authStore.setAuth(response.data.token, response.data.user)
     message.success('登录成功')
-    router.push(redirect || '/')
+    router.push(redirect || { name: 'Dashboard' })
   } catch (error: unknown) {
     message.error((error as ApiResponse).msg || '网络错误，请稍后重试')
   }

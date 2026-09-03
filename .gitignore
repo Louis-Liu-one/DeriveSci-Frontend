@@ -17,6 +17,7 @@ coverage
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+.copilot-commit-message-instructions.md
 .idea
 *.suo
 *.ntvs*

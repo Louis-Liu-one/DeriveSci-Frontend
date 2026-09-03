@@ -50,6 +50,17 @@ export const useAuthStore = defineStore('auth', {
         this.clear()
       }
     },
+    async unregister() {
+      try {
+        await axios.post(
+          '/api/auth/unregister',
+          {},
+          { headers: { Authorization: `Bearer ${this.token}` }, withCredentials: true },
+        )
+      } finally {
+        this.clear()
+      }
+    },
     clear() {
       this.setAccessToken(null)
       this.userInfo = null
