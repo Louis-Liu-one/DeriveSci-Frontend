@@ -7,9 +7,19 @@ export const request: AxiosInstance = axios.create({
   baseURL: '/api',
   timeout: 10000,
   withCredentials: true,
+  xsrfCookieName: 'csrf_refresh_token',
+  xsrfHeaderName: 'X-CSRF-TOKEN',
   headers: {
     'Content-Type': 'application/json',
   },
+})
+
+const refreshRequest = axios.create({
+  baseURL: '/api',
+  timeout: 10000,
+  withCredentials: true,
+  xsrfCookieName: 'csrf_refresh_token',
+  xsrfHeaderName: 'X-CSRF-TOKEN',
 })
 
 interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
@@ -21,7 +31,7 @@ let refreshPromise: Promise<string | null> | null = null
 async function refreshToken(): Promise<string | null> {
   const authStore = useAuthStore()
   try {
-    const response = await axios.post('/api/auth/refresh', {}, { withCredentials: true })
+    const response = await refreshRequest.post('/auth/refresh')
     const newToken = response.data.data.token
     authStore.setAccessToken(newToken)
     return newToken
