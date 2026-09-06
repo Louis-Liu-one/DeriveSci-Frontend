@@ -1,3 +1,9 @@
+:root {
+  --font-main: 'Main Font', 'Main Font SC', 'Times New Roman', Times, serif;
+  --font-sans: 'Sans Font', 'Sans Font SC', 'Lucida Sans', Geneva, Verdana, sans-serif;
+  --font-mono: 'Mono Font', 'Sans Font SC', 'Courier New', Courier, monospace;
+}
+
 @font-face {
   font-family: 'Main Font';
   src: url(@/assets/fonts/Main.ttf) format('truetype');

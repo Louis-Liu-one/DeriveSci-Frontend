@@ -1,14 +1,15 @@
 <template>
-  <div>
+  <MainLayout>
     <div>Welcome, {{ authStore.userInfo?.userName }}</div>
     <n-button type="primary" @click="handleLogout">Logout</n-button>
     <n-button type="primary" @click="handleUnregister">Unregister</n-button>
-  </div>
+  </MainLayout>
 </template>
 
 <script setup lang="ts">
 import { NButton } from 'naive-ui'
 import { useDialog, useMessage } from 'naive-ui'
+import MainLayout from '@/layouts/MainLayout.vue'
 
 import router from '@/router'
 import { useAuthStore } from '@/stores/modules/auth'
@@ -23,7 +24,7 @@ const handleLogout = async () => {
 }
 
 const handleUnregister = async () => {
-  const d = dialog.warning({
+  const d = dialog.error({
     title: '确认注销账户吗？',
     content: '注销后，您的所有数据将被永久删除且无法恢复，请谨慎操作。',
     positiveText: '确认注销',

@@ -3,10 +3,8 @@ import type { GlobalThemeOverrides } from 'naive-ui'
 
 const sharedCommon = {
   borderRadius: '8px',
-  fontFamily: '"Main Font", "Main Font SC", "Times New Roman", Times, serif',
-  fontMain: '"Main Font", "Main Font SC", "Times New Roman", Times, serif',
-  fontSans: '"Sans Font", "Sans Font SC", "Lucida Sans", Geneva, Verdana, sans-serif',
-  fontMono: '"Mono Font", "Sans Font SC", "Courier New", Courier, monospace',
+  fontFamily: 'var(--font-main)',
+  fontFamilyMono: 'var(--font-mono)',
 }
 
 export const lightThemeOverrides: GlobalThemeOverrides = {

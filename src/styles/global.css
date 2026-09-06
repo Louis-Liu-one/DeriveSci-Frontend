@@ -14,3 +14,11 @@
 p.katex-block {
   overflow-x: auto;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
